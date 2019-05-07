@@ -4,6 +4,7 @@ h1 {
 	color: #0D2C40;
 	letter-spacing: 1px;
 	font-size: 45px;
+	margin: 0;
 }
 
 
@@ -30,4 +31,15 @@ h2 {
 	letter-spacing: :1px;
 	font-weight: 600;
 	font-size: 20px;
+}
+
+header {
+	background: #F15B31;
+	color: #FFFFFF;
+	padding: 30px 20px;
+}
+
+
+body {
+	margin: 0;
 }
