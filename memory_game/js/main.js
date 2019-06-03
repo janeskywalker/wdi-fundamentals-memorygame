@@ -6,18 +6,7 @@ const cards = ["queen", "queen", "king", "king"]
 
 var cardsInPlay = []
 
-
-
-var function flipCard(cardId) {
-
-
-	cardsInPlay.push(cardOne)
-	cardsInPlay.push(cardTwo)
-
-
-	console.log("User flipped " + cardOne)
-	console.log("User flipped " + cardTwo)
-
+function checkForMatch() {
 
 	if(cardsInPlay.length ===2) {
 		if(cardsInPlay[0] === cardsInPlay[1]) {
@@ -26,5 +15,18 @@ var function flipCard(cardId) {
 			alert("Sorry, try again")
 		}
 	}
+}
+
+
+function flipCard(cardsId) {
+
+	console.log("User flipped " + cards[cardsId])
+
+	cardsInPlay.push(cards[cardsId])
 
 }
+
+flipCard(3)
+flipCard(2)
+
+
