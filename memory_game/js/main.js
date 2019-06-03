@@ -24,6 +24,8 @@ function flipCard(cardsId) {
 
 	cardsInPlay.push(cards[cardsId])
 
+	checkForMatch()
+
 }
 
 flipCard(3)
