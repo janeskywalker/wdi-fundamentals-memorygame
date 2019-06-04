@@ -46,16 +46,19 @@ function checkForMatch() {
 // after user flip two cards, push them into the cardsInPlay array, call checkForMatch
 function flipCard(cardsId) {
 
-	console.log("User flipped " + cards[cardsId])
+	console.log("User flipped " + cards[cardsId].rank)
 
-	cardsInPlay.push(cards[cardsId])
+	console.log(cards[cardsId].cardImage)
+	console.log(cards[cardsId].suit)
+
+	cardsInPlay.push(cards[cardsId].rank)
 
 	checkForMatch()
 
 }
 
 // user flip cards, calling flipCard
-flipCard(3)
+flipCard(1)
 flipCard(2)
 
 
