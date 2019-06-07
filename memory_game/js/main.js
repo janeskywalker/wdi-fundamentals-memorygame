@@ -58,7 +58,32 @@ function flipCard(cardsId) {
 }
 
 // user flip cards, calling flipCard
-flipCard(1)
-flipCard(2)
+// flipCard(0)
+// flipCard(1)
+
+
+
+
+function createBoard() {
+
+	const gameboard = document.querySelector('#game-board')
+
+	for(var i = 0; i < cards.length; i ++) {
+
+		var cardElement = document.createElement("img");
+
+		cardElement.setAttribute("src", "images/back.png");
+		cardElement.setAttribute("data-id", i);
+
+		cardElement.addEventListener("click", flipCard)
+
+		gameboard.appendChild(cardElement)
+
+	}
+}
+
+createBoard()
+
+
 
 
