@@ -44,7 +44,13 @@ function checkForMatch() {
 }
 
 // after user flip two cards, push them into the cardsInPlay array, call checkForMatch
-function flipCard(cardsId) {
+function flipCard() {
+
+	console.log('clicked')
+
+	console.log(this.getAttribute("data-id"))
+
+	var cardsId = this.getAttribute("data-id")
 
 	console.log("User flipped " + cards[cardsId].rank)
 
