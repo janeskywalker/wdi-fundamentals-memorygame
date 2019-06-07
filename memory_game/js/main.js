@@ -28,6 +28,13 @@ const cards = [
 	}, 
 ]
 
+
+
+// function resetGame() {
+// 	createBoard()
+// }
+
+
 // storing flipped cards
 var cardsInPlay = []
 
@@ -40,11 +47,19 @@ function checkForMatch() {
 			alert("Sorry, try again")
 		}
 
-		cardsInPlay = []
+		// const resetBtn = document.createElement('button')
+		// resetBtn.innerText = "reset"
+		// console.log(resetBtn)
 
+		// const resetP = document.querySelector('#resetBtn')
+		// console.log(resetP)
 
+		// resetP.appendChild(resetBtn)
+
+		// resetBtn.addEventListener('click', resetGame)
 
 }
+
 
 // after user flip two cards, push them into the cardsInPlay array, call checkForMatch
 function flipCard() {
@@ -68,6 +83,7 @@ function flipCard() {
 
 	if(cardsInPlay.length ===2) {
 		checkForMatch()
+
 	}
 
 
