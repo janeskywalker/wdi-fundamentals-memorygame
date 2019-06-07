@@ -34,13 +34,16 @@ var cardsInPlay = []
 // check for match of the two flipped cards in the cardsInPlay array  
 function checkForMatch() {
 
-	if(cardsInPlay.length ===2) {
 		if(cardsInPlay[0] === cardsInPlay[1]) {
 			alert("You found a match!")
 		} else {
 			alert("Sorry, try again")
 		}
-	}
+
+		cardsInPlay = []
+
+
+
 }
 
 // after user flip two cards, push them into the cardsInPlay array, call checkForMatch
@@ -49,7 +52,6 @@ function flipCard() {
 	console.log('clicked')
 
 	console.log(this.getAttribute("data-id"))
-
 	var cardsId = this.getAttribute("data-id")
 
 	console.log("User flipped " + cards[cardsId].rank)
@@ -57,15 +59,20 @@ function flipCard() {
 	console.log(cards[cardsId].cardImage)
 	console.log(cards[cardsId].suit)
 
-	cardsInPlay.push(cards[cardsId].rank)
+	console.log('this:', this)
+	this.setAttribute("src", cards[cardsId].cardImage)
 
-	checkForMatch()
+	cardsInPlay.push(cards[cardsId].rank)
+	console.log(cardsInPlay)
+
+
+	if(cardsInPlay.length ===2) {
+		checkForMatch()
+	}
+
 
 }
 
-// user flip cards, calling flipCard
-// flipCard(0)
-// flipCard(1)
 
 
 
